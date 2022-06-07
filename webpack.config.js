@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
+    publicPath: "dist/", //it's automatic in Webpack 5, you don't need that line
   },
   mode: "none",
   module: {
