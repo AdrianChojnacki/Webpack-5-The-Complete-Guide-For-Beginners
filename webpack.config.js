@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: "dist/", // in Webpack 5 this is automatic, you don't need this line
   },
@@ -48,6 +48,6 @@ module.exports = {
   },
   plugins: [
     new TerserPlugin(),
-    new MiniCssExtractPlugin({ filename: "styles.css" }),
+    new MiniCssExtractPlugin({ filename: "styles.[contenthash].css" }),
   ],
 };
