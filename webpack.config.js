@@ -12,7 +12,7 @@ module.exports = {
     // publicPath: "dist/", // in Webpack 5 this is automatic, you don't need this line
     publicPath: "",
   },
-  mode: "none",
+  mode: "development",
   module: {
     rules: [
       {
